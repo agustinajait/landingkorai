@@ -7,6 +7,19 @@
     <meta name="description" content="Combinamos inteligencia artificial, datos y empatía para una asistencia social más humana.">
     
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                violet: { 50: '#f5f3ff', 100: '#ede9fe', 600: '#7c3aed', 700: '#6d28d9', 900: '#4c1d95'},
+                fuchsia: { 50: '#fdf4ff', 100: '#fae8ff', 500: '#d946ef', 600: '#c026d3'},
+                blue: { 600: '#2563eb', 700: '#1d4ed8', 900: '#1e3a8a'}
+              }
+            }
+          }
+        }
+      </script>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     
@@ -14,13 +27,15 @@
 
     <style>
         body { font-family: 'Inter', sans-serif; }
+        /* NUEVO GRADIENTE: VIOLETA A FUCSIA */
         .gradient-text {
-            background: linear-gradient(90deg, #2563EB, #10B981);
+            background: linear-gradient(90deg, #7c3aed, #c026d3);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        /* NUEVO FONDO HERO: AZUL MUY CLARO A VIOLETA MUY CLARO */
         .hero-bg {
-            background: linear-gradient(to bottom right, #f0f9ff, #e0f2fe);
+            background: linear-gradient(to bottom right, #f8faff, #f3f0ff);
         }
     </style>
 </head>
@@ -30,15 +45,15 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0 flex items-center">
-                    <span class="text-2xl font-bold text-blue-900 tracking-tighter">KORAI<span class="text-green-500">.</span></span>
+                    <span class="text-2xl font-bold text-blue-900 tracking-tighter">KORAI<span class="text-fuchsia-500">.</span></span>
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#solucion" class="text-gray-600 hover:text-blue-600 font-medium transition">Solución</a>
-                    <a href="#proceso" class="text-gray-600 hover:text-blue-600 font-medium transition">Cómo funciona</a>
-                    <a href="#nosotros" class="text-gray-600 hover:text-blue-600 font-medium transition">Nosotros</a>
+                    <a href="#solucion" class="text-gray-600 hover:text-violet-600 font-medium transition">Solución</a>
+                    <a href="#proceso" class="text-gray-600 hover:text-violet-600 font-medium transition">Cómo funciona</a>
+                    <a href="#nosotros" class="text-gray-600 hover:text-violet-600 font-medium transition">Nosotros</a>
                 </div>
                 <div class="hidden md:flex">
-                    <a href="mailto:agustina@korai.com" class="bg-blue-900 text-white px-5 py-2 rounded-full font-medium hover:bg-blue-800 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    <a href="mailto:agustina@korai.com" class="bg-blue-600 text-white px-5 py-2 rounded-full font-medium hover:bg-blue-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                         Solicitar Demo
                     </a>
                 </div>
@@ -48,7 +63,7 @@
 
     <section class="pt-32 pb-20 lg:pt-48 lg:pb-24 hero-bg overflow-hidden relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide mb-4 inline-block">
+            <span class="bg-violet-100 text-violet-700 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide mb-4 inline-block">
                 GovTech + Social Impact
             </span>
             
@@ -65,7 +80,7 @@
                 <a href="#contacto" class="bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition shadow-lg">
                     Hablemos
                 </a>
-                <a href="#demo" class="bg-white text-gray-700 border border-gray-200 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-50 transition">
+                <a href="#demo" class="bg-white text-gray-700 border border-gray-200 px-8 py-4 rounded-lg font-bold text-lg hover:bg-violet-50 hover:text-violet-700 hover:border-violet-200 transition">
                     Ver Video
                 </a>
             </div>
@@ -100,24 +115,24 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="p-8 border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition bg-gray-50 group hover:-translate-y-1 duration-300">
-                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
+                <div class="p-8 border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition bg-white group hover:-translate-y-1 duration-300">
+                    <div class="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center text-violet-600 mb-6 group-hover:bg-violet-600 group-hover:text-white transition">
                         <i class="fa-solid fa-brain text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">IA Predictiva</h3>
                     <p class="text-gray-600">Algoritmos que analizan datos para predecir necesidades y optimizar la distribución de ayudas.</p>
                 </div>
 
-                <div class="p-8 border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition bg-gray-50 group hover:-translate-y-1 duration-300">
-                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center text-green-600 mb-6 group-hover:bg-green-600 group-hover:text-white transition">
+                <div class="p-8 border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition bg-white group hover:-translate-y-1 duration-300">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center text-blue-600 mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
                         <i class="fa-solid fa-chart-line text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Trazabilidad Total</h3>
                     <p class="text-gray-600">Monitoreo transparente del impacto de cada inversión hasta el beneficiario final.</p>
                 </div>
 
-                <div class="p-8 border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition bg-gray-50 group hover:-translate-y-1 duration-300">
-                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center text-purple-600 mb-6 group-hover:bg-purple-600 group-hover:text-white transition">
+                <div class="p-8 border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition bg-white group hover:-translate-y-1 duration-300">
+                    <div class="w-12 h-12 bg-fuchsia-100 rounded-lg flex items-center justify-center text-fuchsia-600 mb-6 group-hover:bg-fuchsia-600 group-hover:text-white transition">
                         <i class="fa-solid fa-users text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-3">Enfoque Humano</h3>
@@ -135,42 +150,42 @@
             </div>
 
             <div class="space-y-6">
-                <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl bg-gray-800 border border-gray-700 hover:border-blue-500 transition duration-300">
+                <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl bg-gray-800 border border-gray-700 hover:border-fuchsia-500 transition duration-300 group">
                     <div class="flex-shrink-0">
-                        <div class="w-12 h-12 rounded-full bg-blue-900 text-blue-300 flex items-center justify-center text-xl font-bold border border-blue-700">1</div>
+                        <div class="w-12 h-12 rounded-full bg-violet-900/50 text-violet-300 flex items-center justify-center text-xl font-bold border border-violet-700 group-hover:border-fuchsia-500 transition">1</div>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold text-white mb-2">Entrevista empática</h3>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-fuchsia-300 transition">Entrevista empática</h3>
                         <p class="text-gray-400 leading-relaxed">La persona expresa su situación y necesidades a través de una experiencia guiada por IA.</p>
                     </div>
                 </div>
 
-                <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl bg-gray-800 border border-gray-700 hover:border-blue-500 transition duration-300">
+                <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl bg-gray-800 border border-gray-700 hover:border-fuchsia-500 transition duration-300 group">
                     <div class="flex-shrink-0">
-                        <div class="w-12 h-12 rounded-full bg-blue-900 text-blue-300 flex items-center justify-center text-xl font-bold border border-blue-700">2</div>
+                        <div class="w-12 h-12 rounded-full bg-violet-900/50 text-violet-300 flex items-center justify-center text-xl font-bold border border-violet-700 group-hover:border-fuchsia-500 transition">2</div>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold text-white mb-2">Comprensión del contexto</h3>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-fuchsia-300 transition">Comprensión del contexto</h3>
                         <p class="text-gray-400 leading-relaxed">Korai detecta patrones, urgencias y posibles caminos, sin perder humanidad en el proceso.</p>
                     </div>
                 </div>
 
-                <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl bg-gray-800 border border-gray-700 hover:border-blue-500 transition duration-300">
+                <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl bg-gray-800 border border-gray-700 hover:border-fuchsia-500 transition duration-300 group">
                     <div class="flex-shrink-0">
-                        <div class="w-12 h-12 rounded-full bg-blue-900 text-blue-300 flex items-center justify-center text-xl font-bold border border-blue-700">3</div>
+                        <div class="w-12 h-12 rounded-full bg-violet-900/50 text-violet-300 flex items-center justify-center text-xl font-bold border border-violet-700 group-hover:border-fuchsia-500 transition">3</div>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold text-white mb-2">Soluciones concretas</h3>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-fuchsia-300 transition">Soluciones concretas</h3>
                         <p class="text-gray-400 leading-relaxed">Propone opciones reales: capacitación, empleo, emprendimiento o articulación comunitaria.</p>
                     </div>
                 </div>
 
-                <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl bg-gray-800 border border-gray-700 hover:border-blue-500 transition duration-300">
+                <div class="flex flex-col md:flex-row gap-6 p-6 rounded-2xl bg-gray-800 border border-gray-700 hover:border-fuchsia-500 transition duration-300 group">
                     <div class="flex-shrink-0">
-                        <div class="w-12 h-12 rounded-full bg-blue-900 text-blue-300 flex items-center justify-center text-xl font-bold border border-blue-700">4</div>
+                        <div class="w-12 h-12 rounded-full bg-violet-900/50 text-violet-300 flex items-center justify-center text-xl font-bold border border-violet-700 group-hover:border-fuchsia-500 transition">4</div>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold text-white mb-2">Datos para decidir</h3>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-fuchsia-300 transition">Datos para decidir</h3>
                         <p class="text-gray-400 leading-relaxed">El territorio obtiene claridad: información precisa para priorizar recursos y actuar mejor.</p>
                     </div>
                 </div>
@@ -178,53 +193,10 @@
         </div>
     </section>
 
-    <section id="nosotros" class="py-24 bg-blue-50">
+    <section id="nosotros" class="py-24 bg-violet-50/50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-3xl font-bold text-gray-900 mb-6">Nosotros</h2>
                 <p class="text-xl text-gray-700 leading-relaxed">
                     Korai nace de una trayectoria probada construyendo tecnología con impacto. 
-                    Desde <span class="font-semibold text-blue-900">Tu VideoCV</span> hasta proyectos en territorio, el foco siempre fue el mismo: 
-                    <span class="font-semibold text-blue-900">ampliar oportunidades.</span>
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-start hover:shadow-lg transition duration-300">
-                    <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-2xl mb-6">
-                        <i class="fa-solid fa-video"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Tu VideoCV</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Una empresa pionera en video currículums que ayudó a más de <span class="font-bold text-gray-900">1.000.000 de personas</span> a acceder a oportunidades laborales y transformó la forma de mostrar el talento.
-                    </p>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-start hover:shadow-lg transition duration-300">
-                    <div class="w-14 h-14 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-2xl mb-6">
-                        <i class="fa-solid fa-hand-holding-heart"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Territorio + comunidad</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Experiencia en contextos vulnerables y trabajo junto a organizaciones sociales, con foco en inclusión, capacitación y conexiones que generan movilidad real.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contacto" class="bg-white py-12 border-t border-gray-200">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-4 md:mb-0">
-                <span class="text-xl font-bold text-blue-900">KORAI.</span>
-                <p class="text-sm text-gray-500 mt-2">© 2025 Korai Impact.</p>
-            </div>
-            <div class="flex space-x-6">
-                <a href="#" class="text-gray-400 hover:text-blue-600 text-2xl"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="mailto:contacto@korai.com" class="text-gray-400 hover:text-blue-900 text-2xl"><i class="fa-solid fa-envelope"></i></a>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+                    Desde <span class="font-semibold text-violet-70
