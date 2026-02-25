@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KORAI | Diagnostico social gamificado </title>
+    <meta name="description" content="Korai permite a municipios y organizaciones escuchar a su comunidad y tomar decisiones públicas basadas en datos reales del territorio, a través de una experiencia simple y gamificada para el ciudadano.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                violet: { 50: '#f5f3ff', 100: '#ede9fe', 600: '#7c3aed', 700: '#6d28d9', 900: '#4c1d95'},
+                fuchsia: { 50: '#fdf4ff', 100: '#fae8ff', 500: '#d946ef', 600: '#c026d3'},
+                blue: { 900: '#1e3a8a'} // Mantenemos solo el azul oscuro para el logo textual
+              }
+            }
+          }
+        }
+      </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* GRADIENTE DE TEXTO: VIOLETA A FUCSIA */
+        .gradient-text {
+            background: linear-gradient(90deg, #7c3aed, #c026d3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        /* GRADIENTE DE BOTONES: VIOLETA A FUCSIA */
+        .btn-gradient {
+            background: linear-gradient(90deg, #7c3aed, #c026d3);
+        }
+        .btn-gradient:hover {
+            background: linear-gradient(90deg, #6d28d9, #c026d3); /* Un poco más oscuro al hover */
+        }
+
+        /* FONDO HERO: AZUL MUY CLARO A VIOLETA MUY CLARO */
+        .hero-bg {
+            background: linear-gradient(to bottom right, #f8faff, #f3f0ff);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-b from-white via-white to-slate-50 text-gray-900 antialiased">
+
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold text-blue-900 tracking-tighter">KORAI<span class="text-fuchsia-500">.</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#solucion" class="text-gray-600 hover:text-violet-600 font-medium transition">Solución</a>
+                    <a href="#proceso" class="text-gray-600 hover:text-violet-600 font-medium transition">Cómo funciona</a>
+                    <a href="#nosotros" class="text-gray-600 hover:text-violet-600 font-medium transition">Nosotros</a>
+                </div>
+
+                <!-- CAMBIO: Solicitar Demo ahora va a WhatsApp -->
+                <div class="hidden md:flex">
+                    <a href="https://wa.me/5491161266433?text=Hola%20quiero%20solicitar%20una%20demo%20de%20KORAI"
+                       target="_blank"
+                       class="btn-gradient text-white px-5 py-2 rounded-full font-medium transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                        Solicitar Demo
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-20 lg:pt-48 lg:pb-24 hero-bg overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="bg-violet-100 text-violet-700 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide mb-4 inline-block">
+                GovTech + Social Impact
+            </span>
+            
+            <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+               Diagnostico social gamificado <br>
+                <span class="gradient-text"></span>
+            </h1>
+            
+            <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto mb-10 leading-relaxed">
+                Korai permite a municipios y organizaciones escuchar a su comunidad y tomar decisiones públicas basadas en datos reales del territorio, a través de una experiencia simple y gamificada para el ciudadano.
+            </p>
+            
+            <div class="flex justify-center gap-4">
+                <!-- CAMBIO: Hablemos ahora va a #solucion -->
+                <a href="#solucion" class="btn-gradient text-white px-8 py-4 rounded-lg font-bold text-lg transition shadow-lg hover:shadow-xl">
+                    Hablemos
+                </a>
+                <a href="#solucion" class="bg-white text-violet-700 border-2 border-violet-200 px-8 py-4 rounded-lg font-bold text-lg hover:bg-violet-600 hover:text-white hover:border-violet-600 transition">
+                    Ver Video
+                </a>
+            </div>
+        </div>
+    </section>
+
+<!-- DESAFÍO ACTUAL -->
+<section class="bg-gray-50 py-16 px-6">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h2 class="text-3xl font-bold mb-6">El desafío actual</h2>
+      <p class="text-lg text-gray-600 leading-relaxed">
+        Muchas decisiones públicas se toman con información incompleta o desactualizada.
+        Los municipios necesitan comprender de manera continua cómo viven realmente sus vecinos,
+        cuáles son sus prioridades y cómo evoluciona el territorio.
+      </p>
+    </div>
+    <div>
+      <img 
+        src="el_desafio.png"
+        alt="Participación ciudadana y territorio"
+        class="rounded-2xl shadow-lg w-full h-auto object-cover"
+      />
+    </div>
+  </div>
+</section>
+
+
+<section id="solucion" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900">Nuestra solucion: Diagnostico social gamificado </h2>
+                <p class="mt-4 text-lg text-gray-600">Un instrumento a medida, con metodología de semáforo y resultados claros en un dashboard privado</p>
+            </div>
+
+            <!-- Imagen referencial (Solución) -->
+            <div class="max-w-5xl mx-auto mb-14">
+                <div class="relative overflow-hidden rounded-3xl border border-gray-100 shadow-sm">
+                    <img src="solucion.png" alt="Dashboard y solución Korai" class="w-full h-[260px] sm:h-[340px] object-cover" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/35 via-black/0 to-black/0"></div>
+                    <div class="absolute bottom-4 left-4 right-4">
+                        <div class="inline-flex items-center gap-2 rounded-full bg-white/90 backdrop-blur px-4 py-2 text-sm text-gray-800 shadow">
+                            <span class="w-2 h-2 rounded-full bg-violet-500"></span>
+                            Lectura clara del territorio en una vista institucional
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="p-8 border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition bg-white group hover:-translate-y-1 duration-300">
+                    <div class="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center text-violet-600 mb-6 group-hover:bg-violet-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-brain text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">IA Predictiva</h3>
+                    <p class="text-gray-600">Algoritmos que analizan datos para predecir necesidades y optimizar la distribución de ayudas.</p>
+                </div>
+
+                <div class="p-8 border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition bg-white group hover:-translate-y-1 duration-300">
+                    <div class="w-12 h-12 bg-fuchsia-100 rounded-lg flex items-center justify-center text-fuchsia-600 mb-6 group-hover:bg-fuchsia-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Trazabilidad Total</h3>
+                    <p class="text-gray-600">Monitoreo transparente del impacto de cada inversión hasta el beneficiario final.</p>
+                </div>
+
+                <div class="p-8 border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition bg-white group hover:-translate-y-1 duration-300">
+                    <div class="w-12 h-12 bg-violet-100 rounded-lg flex items-center justify-center text-violet-600 mb-6 group-hover:bg-violet-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-users text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Enfoque Humano</h3>
+                    <p class="text-gray-600">Diseñado pensando en la experiencia del usuario, facilitando el acceso a oportunidades.</p>
+                </div>
+
+                <!-- Caja 4 GovTech (agregada previamente) -->
+                <div class="p-8 border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition bg-white group hover:-translate-y-1 duration-300">
+                    <div class="w-12 h-12 bg-fuchsia-100 rounded-lg flex items-center justify-center text-fuchsia-600 mb-6 group-hover:bg-fuchsia-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-building-columns text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">GovTech</h3>
+                    <p class="text-gray-600">
+                        Korai transforma el modo en el que los municipios detectan, comprenden y atienden las problemáticas de su población, datos en tiempo real, mapeo de necesidades, y métricas de impacto.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- KORAI EN ACCIÓN (pulida: sin verdes, micro-animaciones y paleta Korai) -->
+    <section id="accion" class="py-24 bg-gray-900 text-white border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-12">
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">
+                    KORAI <span class="text-gray-300">en acción</span>
+                </h2>
+
+                <p class="text-gray-300 text-lg max-w-2xl lg:text-right">
+                    En minutos: escucha, comprensión contextual, propuestas y datos para decidir mejor.
+                </p>
+            </div>
+
+            <!-- Imagen referencial (Korai en acción) -->
+            <div class="mb-12">
+                <div class="relative overflow-hidden rounded-3xl border border-white/10 shadow-lg">
+                    <img src="korai%20en%20accion.png" alt="Korai en acción" class="w-full h-[260px] sm:h-[360px] object-cover" />
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/55 via-black/10 to-black/0"></div>
+                    <div class="absolute bottom-5 left-5 right-5">
+                        <div class="max-w-xl">
+                            <div class="text-white font-semibold text-lg">Participación ciudadana en minutos</div>
+                            <div class="text-gray-200 text-sm mt-1">Una experiencia simple que genera datos útiles para decidir mejor.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+
+                <!-- Card 1 -->
+                <div class="rounded-2xl bg-gray-800/60 border border-gray-700 p-8 shadow-sm transition duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-violet-500/60 group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-11 h-11 rounded-xl bg-violet-900/40 text-violet-200 flex items-center justify-center border border-violet-700/40 group-hover:border-fuchsia-500/60 transition">
+                            <i class="fa-solid fa-user text-xl"></i>
+                        </div>
+                        <div class="text-sm font-semibold text-violet-200">Para la persona</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-fuchsia-200 transition">Una experiencia guiada, empática y simple</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        La persona expresa su situación. Korai interpreta urgencias y contextos.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="rounded-2xl bg-gray-800/60 border border-gray-700 p-8 shadow-sm transition duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-violet-500/60 group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-11 h-11 rounded-xl bg-fuchsia-900/30 text-fuchsia-200 flex items-center justify-center border border-fuchsia-700/40 group-hover:border-violet-500/60 transition">
+                            <i class="fa-solid fa-city text-xl"></i>
+                        </div>
+                        <div class="text-sm font-semibold text-fuchsia-200">Para el municipio</div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-violet-200 transition">Datos accionables, no reportes</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Radiografía actualizada del territorio: patrones, focos críticos, segmentación y priorización para asignar recursos con más precisión.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="rounded-2xl bg-gray-800/60 border border-gray-700 p-8 shadow-sm transition duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-violet-500/60 group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-11 h-11 rounded-xl bg-violet-900/40 text-violet-200 flex items-center justify-center border border-violet-700/40 group-hover:border-fuchsia-500/60 transition">
+                            <i class="fa-solid fa-people-arrows text-xl"></i>
+                        </div>
+                        <div class="text-sm font-semibold text-violet-200">Para la comunidad </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-fuchsia-200 transition">Beneficios e incentivos </h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Korai permite asociar la participación a beneficios, aumentando la tasa de respuesta.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+<section id="nosotros" class="py-24 bg-violet-50/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Nosotros</h2>
+                <p class="text-xl text-gray-700 leading-relaxed">
+                    Korai nace de una trayectoria probada construyendo tecnología con impacto. 
+                    Desde <span class="font-semibold text-violet-700"><a href="https://tuvideocv.carrd.co/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 underline text-purple-600">Tu VideoCV</a></span> hasta proyectos en territorio, el foco siempre fue el mismo: 
+                    <span class="font-semibold text-violet-700">ampliar oportunidades.</span>
+                </p>
+
+                <!-- Galería -->
+                <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-5">
+                    <div class="group overflow-hidden rounded-2xl border border-violet-100 bg-white shadow-sm">
+                        <img src="tuvideocv_trailer.jpg" alt="Tu VideoCV en territorio" class="w-full h-44 object-cover transition duration-300 group-hover:scale-[1.03]" />
+                        <div class="p-4 text-sm text-gray-700">Tu VideoCV en territorio: tecnología real, participación real</div>
+                    </div>
+                    <div class="group overflow-hidden rounded-2xl border border-violet-100 bg-white shadow-sm">
+                        <img src="tuvideocv_totem_chile.png" alt="Totem de Tu VideoCV" class="w-full h-44 object-cover transition duration-300 group-hover:scale-[1.03]" />
+                        <div class="p-4 text-sm text-gray-700">Dispositivos y experiencias públicas para escalar inclusión</div>
+                    </div>
+                    <div class="group overflow-hidden rounded-2xl border border-violet-100 bg-white shadow-sm">
+                        <img src="tuvideocv_dia_piloto.jpeg" alt="Activación y convocatoria" class="w-full h-44 object-cover transition duration-300 group-hover:scale-[1.03]" />
+                        <div class="p-4 text-sm text-gray-700">Innovación con impacto social: activaciones que movilizan comunidades</div>
+                    </div>
+</div>
+
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-start hover:shadow-lg transition duration-300 hover:border-violet-200">
+                    <div class="w-14 h-14 bg-violet-100 text-violet-600 rounded-full flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4"><a href="https://tuvideocv.carrd.co/" target="_blank" rel="noopener noreferrer" class="hover:opacity-80 underline text-purple-600">Tu VideoCV</a></h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Una empresa pionera en video currículums que ayudó a más de <span class="font-bold text-gray-900">1.000.000 de personas</span> a acceder a oportunidades laborales y transformó la forma de mostrar el talento.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-start hover:shadow-lg transition duration-300 hover:border-fuchsia-200">
+                    <div class="w-14 h-14 bg-fuchsia-100 text-fuchsia-600 rounded-full flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Territorio + comunidad</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Experiencia en contextos vulnerables y trabajo junto a organizaciones sociales, con foco en inclusión, capacitación y conexiones que generan movilidad real.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NUEVA ÚLTIMA SECCIÓN CTA (agregada) -->
+    <section class="py-20 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">¿Sos municipio o aliado?</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-10">
+                Co-diseñamos el caso de uso y te mostramos Korai operando con tu contexto.
+            </p>
+
+            <a href="https://wa.me/5491161266433?text=Hola%20soy%20municipio%20o%20aliado%20y%20quiero%20ver%20KORAI%20operando%20con%20nuestro%20contexto"
+               target="_blank"
+               class="btn-gradient text-white px-10 py-4 rounded-lg font-bold text-lg transition shadow-lg hover:shadow-xl">
+                Escribir ahora
+            </a>
+        </div>
+    </section>
+
+    <footer id="contacto" class="bg-white py-12 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <span class="text-xl font-bold text-blue-900">KORAI<span class="text-fuchsia-500">.</span></span>
+                <p class="text-sm text-gray-500 mt-2">© 2025 Korai Impact.</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="text-gray-400 hover:text-blue-600 text-2xl"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:contacto@korai.com" class="text-gray-400 hover:text-violet-600 text-2xl"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
